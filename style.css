@@ -2,10 +2,103 @@
 	box-sizing: content-box;
 }
 body {
+	color: black;
+	font-family: helvetica, arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	text-align: center;
+	font-size: 24px;
+	height: 100vh;
+	overflow: hidden;
 }
 img {
 	max-width: 100%;
 	height: auto;
 }
+main {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    background-color: #e94e7a;
+}
+.Shinchan {
+	width: 800px;
+	height: 450px;
+	overflow: hidden;
+    background-image: url(images/shinchan.jpg);
+    background-size: auto;
+    background-position: center;
+    transform: scale(0.2);
+    transition: transform 6s, box-shadow 2s;
+}
+.content {
+	display: inline-block;
+	margin: 1em auto;
+}
+.content img {
+	overflow: hidden;
+    display: block;
+	transition: all 1.5s;
+	filter: blur(20px);
+}
+#show img {
+	opacity: 1;
+	filter: blur(0px);
+}
+#zoom img {
+	transform: scale(3.3);
+}
+.trigger {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	width: 1.9em;
+	height: 1.9em;
+	cursor: pointer;
+	padding: 0;
+	background-color: #e94e7a;
+	color: #481736;
+	line-height: 1.4;
+	border-radius: 50%;
+    font-size: 1.2em;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.25s ease;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0);
+}
+.trigger-1 {
+	right: 7em;
+}
+.trigger-2 {
+	right: 4.5em;
+}
+.trigger-3 {
+	right: 2em;
+}
+.trigger:hover {
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.75);
+}
+#zoom.one img {
+	transform: scale(4.5) translateX(17%) translateY(-18%);
+}
+#zoom.two img {
+	transform: scale(5) translateX(-7%) translateY(-19%);
+}
+#zoom.three img {
+	transform: scale(7) translateX(-29%) translateY(-25%); 
+}
+.toggle {
+	display: block;
+	position: fixed;
+	transition: opacity 0.5s;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    color: #541d40;
+    font-weight: bolder;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* box-shadow: X Y Spread Color;
